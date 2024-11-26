@@ -1,0 +1,196 @@
+{
+  "teams": {
+    "cardinals": {
+        "id": 1,
+        "cityName": "Arizona",
+        "teamName": "Cardinals",
+        "fullName": "Arizona Cardinals"
+    },
+    "falcons": {
+        "id": 2,
+        "cityName": "Atlanta",
+        "teamName": "Falcons",
+        "fullName": "Atlanta Falcons"
+    },
+    "ravens": {
+        "id": 3,
+        "cityName": "Baltimore",
+        "teamName": "Ravens",
+        "fullName": "Baltimore Ravens"
+    },
+    "bills": {
+        "id": 4,
+        "cityName": "Buffalo",
+        "teamName": "Bills",
+        "fullName": "Buffalo Bills"
+    },
+    "panthers": {
+        "id": 5,
+        "cityName": "Carolina",
+        "teamName": "Panthers",
+        "fullName": "Carolina Panthers"
+    },
+    "bears": {
+        "id": 6,
+        "cityName": "Chicago",
+        "teamName": "Bears",
+        "fullName": "Chicago Bears"
+    },
+    "bengals": {
+        "id": 7,
+        "cityName": "Cincinnati",
+        "teamName": "Bengals",
+        "fullName": "Cincinnati Bengals"
+    },
+    "browns": {
+        "id": 8,
+        "cityName": "Cleveland",
+        "teamName": "Browns",
+        "fullName": "Cleveland Browns"
+    },
+    "cowboys": {
+        "id": 9,
+        "cityName": "Dallas",
+        "teamName": "Cowboys",
+        "fullName": "Dallas Cowboys"
+    },
+    "broncos": {
+        "id": 10,
+        "cityName": "Denver",
+        "teamName": "Broncos",
+        "fullName": "Denver Broncos"
+    },
+    "lions": {
+        "id": 11,
+        "cityName": "Detroit",
+        "teamName": "Lions",
+        "fullName": "Detroit Lions"
+    },
+    "packers": {
+        "id": 12,
+        "cityName": "Green Bay",
+        "teamName": "Packers",
+        "fullName": "Green Bay Packers"
+    },
+    "texans": {
+        "id": 13,
+        "cityName": "Houston",
+        "teamName": "Texans",
+        "fullName": "Houston Texans"
+    },
+    "colts": {
+        "id": 14,
+        "cityName": "Indianapolis",
+        "teamName": "Colts",
+        "fullName": "Indianapolis Colts"
+    },
+    "jaguars": {
+        "id": 15,
+        "cityName": "Jacksonville",
+        "teamName": "Jaguars",
+        "fullName": "Jacksonville Jaguars"
+    },
+    "chiefs": {
+        "id": 16,
+        "cityName": "Kansas City",
+        "teamName": "Chiefs",
+        "fullName": "Kansas City Chiefs"
+    },
+    "raiders": {
+        "id": 17,
+        "cityName": "Las Vegas",
+        "teamName": "Raiders",
+        "fullName": "Las Vegas Raiders"
+    },
+    "chargers": {
+        "id": 18,
+        "cityName": "Los Angeles",
+        "teamName": "Chargers",
+        "fullName": "Los Angeles Chargers"
+    },
+    "rams": {
+        "id": 19,
+        "cityName": "Los Angeles",
+        "teamName": "Rams",
+        "fullName": "Los Angeles Rams"
+    },
+    "dolphins": {
+        "id": 20,
+        "cityName": "Miami",
+        "teamName": "Dolphins",
+        "fullName": "Miami Dolphins"
+    },
+    "vikings": {
+        "id": 21,
+        "cityName": "Minnesota",
+        "teamName": "Vikings",
+        "fullName": "Minnesota Vikings"
+    },
+    "patriots": {
+        "id": 22,
+        "cityName": "New England",
+        "teamName": "Patriots",
+        "fullName": "New England Patriots"
+    },
+    "saints": {
+        "id": 23,
+        "cityName": "New Orleans",
+        "teamName": "Saints",
+        "fullName": "New Orleans Saints"
+    },
+    "giants": {
+        "id": 24,
+        "cityName": "New York",
+        "teamName": "Giants",
+        "fullName": "New York Giants"
+    },
+    "jets": {
+        "id": 25,
+        "cityName": "New York",
+        "teamName": "Jets",
+        "fullName": "New York Jets"
+    },
+    "eagles": {
+        "id": 26,
+        "cityName": "Philadelphia",
+        "teamName": "Eagles",
+        "fullName": "Philadelphia Eagles"
+    },
+    "steelers": {
+        "id": 27,
+        "cityName": "Pittsburgh",
+        "teamName": "Steelers",
+        "fullName": "Pittsburgh Steelers"
+    },
+    "49ers": {
+        "id": 28,
+        "cityName": "San Francisco",
+        "teamName": "49ers",
+        "fullName": "San Francisco 49ers"
+    },
+    "seahawks": {
+        "id": 29,
+        "cityName": "Seattle",
+        "teamName": "Seahawks",
+        "fullName": "Seattle Seahawks"
+    },
+    "buccaneers": {
+        "id": 30,
+        "cityName": "Tampa Bay",
+        "teamName": "Buccaneers",
+        "fullName": "Tampa Bay Buccaneers"
+    },
+    "titans": {
+        "id": 31,
+        "cityName": "Tennessee",
+        "teamName": "Titans",
+        "fullName": "Tennessee Titans"
+    },
+    "commanders": {
+        "id": 32,
+        "cityName": "Washington",
+        "teamName": "Commanders",
+        "fullName": "Washington Commanders"
+    }
+  }
+}
