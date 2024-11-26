@@ -128,3 +128,21 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+node_modules
+
+# VSCode settings
+.vscode/
+
+# Environment variables and private config data
+.env
+config.json
+
+# Package files
+package.json
+package-lock.json
+
+# SQLite database files
+db/
+
+# ESLint settings
+.eslintrc.json
