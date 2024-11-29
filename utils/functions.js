@@ -118,9 +118,11 @@ async function fetchSeasonDataObject(seasonYear = null) {
   if (seasonYear === null) {
     
     try {
+      console.log(`Retrieving current season data...`);
       const seasonDataJSON = await fs.readFileSync(path.join(__dirname, '../data/seasonData.json'));
       const seasonDataObj = await JSON.parse(seasonDataJSON);
 
+      console.log(seasonDataObj);
       return seasonDataObj;
     } catch (error) {
       console.error(`Error fetching season data: ${error.message}`);
@@ -131,32 +133,29 @@ async function fetchSeasonDataObject(seasonYear = null) {
   }
 }
 
-async function fetchMemberTeams(returnFullName = false, seasonYear = 0) {
-  try {
-    if (seasonYear === 0) {
-      seasonYear = 2024;
-    }
-  
-    const seasonDataJSON = fs.readFileSync(path.resolve(__dirname, '../data/seasonData.json'));
-    const seasonDataObj = JSON.parse(seasonDataJSON);
-    const playerInfo = seasonDataObj.players;
-  
-    let teamsArray = [];
-  
-    // Iterate over each player and extract their team
-    for (const player of playerInfo) {
-      if (player.team && !teamsArray.includes(player.team)) {
-        if (returnFullName) {
-          teamsArray.push(convertTeamToFullName(player.team));
-        } else
-          teamsArray.push(player.team);
-      }
-    }
-  
-    return teamsArray;
-  } catch (err) {
-    console.error(`Error fetching member teams: ${err.message}`);
+function fetchMemberTeams(returnFullName = false, seasonYear = 0) {
+
+  if (seasonYear === 0) {
+    seasonYear = 2024;
   }
+
+  const seasonDataJSON = fs.readFileSync(path.resolve(__dirname, '../data/seasonData.json'));
+  const seasonDataObj = JSON.parse(seasonDataJSON);
+  const playerInfo = seasonDataObj.players;
+
+  let teamsArray = [];
+
+  // Iterate over each player and extract their team
+  for (const player of playerInfo) {
+    if (player.team && !teamsArray.includes(player.team)) {
+      if (returnFullName) {
+        teamsArray.push(convertTeamToFullName(player.team));
+      } else
+        teamsArray.push(player.team);
+    }
+  }
+
+  return teamsArray;
 }
 
 async function syncDatabase() {

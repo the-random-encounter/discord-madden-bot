@@ -17,7 +17,7 @@ module.exports = {
               .setDescription('The Discord user who is the commisioner of the League.')
               .setRequired(true))
       .addBooleanOption(option =>
-          option.setName('carryOverMembers')
+          option.setName('carryovermembers')
               .setDescription('Carry over all members from previous season?')
               .setRequired(true)),
       
@@ -25,7 +25,7 @@ module.exports = {
   async execute(interaction) {
 
     console.log(`Beginning initialization of new season...\n`);
-    const carryOverFlag = await interaction.getBooleanOption('carryOverMembers');
+    const carryOverFlag = await interaction.getBooleanOption('carryovermembers');
 
     if (!member.roles.cache.has(commissionerId) || !member.roles.cache.has(adminId)) {
       console.log(`Initialization of new season failed due to insufficient role credentials.\nUser: ${member.displayName}\n`);

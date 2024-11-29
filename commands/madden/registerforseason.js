@@ -34,14 +34,14 @@ module.exports = {
       let comboTeamNames = chosenTeams.concat(chosenTeamsFullNames);
 
       if (comboTeamNames.includes(team)) {
-            await interaction.reply({ content: `The team ${team} has already been chosen. Please select another team.`, ephemeral: true });
-            return;
-        } else if (!allTeams.includes(team)) {
-          await interaction.reply({ content: `The chosen team ('${team}') is not valid. Please provide a team name in either the format of the team name, or full city and team name. EXAMPLES: 'Falcons' or 'Denver Broncos'`, ephemeral: true });
-        } else {
+        await interaction.reply({ content: `The team ${team} has already been chosen. Please select another team.`, ephemeral: true });
+        return;
+      } else if (!allTeams.includes(team)) {
+        await interaction.reply({ content: `The chosen team ('${team}') is not valid. Please provide a team name in either the format of the team name, or full city and team name. EXAMPLES: 'Falcons' or 'Denver Broncos'`, ephemeral: true });
+      } else {
 
-          createNewMember(member, eaname, team);
-          await interaction.reply({ content: `${member} has been registered as a League participant with the EA username ${eaname} and team ${team}.`, ephemeral: true });
-        }
+        createNewMember(member, eaname, team);
+        await interaction.reply({ content: `${member} has been registered as a League participant with the EA username ${eaname} and team ${team}.`, ephemeral: true });
+      }
     }
   }

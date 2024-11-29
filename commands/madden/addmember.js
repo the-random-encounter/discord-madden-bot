@@ -67,7 +67,7 @@ module.exports = {
         // If the team is not valid, do not add
         else if (!allTeams.includes(team)) {
           await interaction.reply({ 
-            content: `The chosen team ('${team}') is not valid. Please provide a team name in either the format of the team name, or full   city and team name. EXAMPLES: 'Falcons' or 'Denver Broncos'`, 
+            content: `The chosen team ('${team}') is not valid. Please provide a team name in either the format of the team name, or full city and team name. EXAMPLES: 'Falcons' or 'Denver Broncos'`, 
             ephemeral: true });
           return;
         } 

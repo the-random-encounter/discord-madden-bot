@@ -1,9 +1,14 @@
 {
   "id": 1,
   "year": 2024,
-  "weekNumber": 24,
+  "weekNumber": 31,
   "players": [
-    
+    ["shockedprodigyx", "New York Giants"],
+    ["tastyhamsandwch", "Kansas City Chiefs"],
+    ["ClaytonQ45", "New England Patriots"],
+    ["Austin207", "Detroit Lions"],
+    ["Lengle45", "Philadelphia Eagles"],
+    ["villasmil12", "Baltimore Ravens"]
   ],
   "superBowlChampion": null,
   "afcChampion": "chiefs",
