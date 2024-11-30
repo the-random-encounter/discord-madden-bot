@@ -146,3 +146,4 @@ db/
 
 # ESLint settings
 .eslintrc.json
+config.json

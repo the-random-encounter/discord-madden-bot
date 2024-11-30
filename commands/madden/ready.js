@@ -22,7 +22,13 @@ module.exports = {
         },
       });
 
-      const allFinished = await User.findOne( { weekFinished: false } );
+      await User.save();
+
+      const allFinished = await User.findOne( { where: { weekFinished: false }} );
+
+      const test = await User.findOne( { where: { weekFinished: true }} );
+
+      console.log(test);
 
       if (allFinished === null ) {
 
@@ -30,7 +36,7 @@ module.exports = {
         await interaction.reply({ content: `@${interaction.member},\nYou have successfully flagged that you are finished for ${weekFancy}. All teams are now ready to advance.`, ephemeral: true });
 
         const announcementChannel = client.channels.cache.get('1307729794221342783');
-        const leagueMemberRole = channel.server.roles.get
+        const leagueMemberRole = channel.server.roles.get;
 
         announcementChannel.send(`@<1307730299840499732>, all teams have now finished their weekly requirements. The League will now soon advance.`);
         announcementChannel.send({ content: `@<1307730011880685668>, please advance the week and notify me when it is complete.`, ephemeral: true });
