@@ -5,8 +5,8 @@ module.exports = {
 	name: Events.ClientReady,
 	once: true,
 	execute(client) {
-    Users.sync({ force: true });
-    Seasons.sync({ force: true }) ;
+    User.sync();
+    Season.sync() ;
 		console.log(`Ready! Logged in as ${client.user.tag}`);
 	},
 };

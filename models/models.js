@@ -71,7 +71,16 @@ User.init({
     allowNull: false,
   },
   role: DataTypes.STRING,
-  numSeasons: DataTypes.INTEGER
+  numSeasons: DataTypes.INTEGER,
+  active: { 
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+  },
+  weekFinished: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+  },
 },
 { sequelize,
   modelName: 'User'

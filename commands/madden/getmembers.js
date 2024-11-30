@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
+const { User } = require('../../models/models.js');
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -7,11 +8,7 @@ module.exports = {
 
   async execute(interaction) {
 
-    const { User } = require('../../models/models.js');
-    console.log(User.findAll())
     const members = await User.findAll();
-    const memberList = members.map(member => member.discordName).join('\n');
-
 
     let outputString = `MEMBERS LIST:`;
     for (let i = 0; i < members.length; i++) {

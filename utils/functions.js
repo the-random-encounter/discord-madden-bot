@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const { sequelize, User, Season } = require('../models/models.js');
+const Op = require('sequelize').Op;
+const { WEEKNUMBERS } = require('../data/constants.js');
+
 
 function convertTeamToFullName(teamNameOrArray) {
   const teamToFullNameMap = {
@@ -176,13 +179,42 @@ async function createNewMember(discordMember, eName, team, role = 'Member') {
 
   try {
 
-    const newUser = await User.create({ discordName: dName, discordGlobal: dGlobal, eaName: eName, team: team, role: role});
+    const [newUser, created] = await User.findOrCreate({ 
+      where: { 
+        [Op.or]: [{ discordName: dName }, { eaName: eName }],
+      },
+      defaults: {
+        discordName: dName, 
+        discordGlobal: dGlobal, 
+        eaName: eName, 
+        team: team,
+        numSeasons: 1, 
+        role: role,
+        active: true }
+      });
 
-    console.log(`Created new user (ID: ${newUser.id}): Discord Name: ${newUser.discordName}, Discord Global: ${newUser.discordGlobal}, 
-      EA Username: ${newUser.eaName}, League Role: ${newUser.role}, Chosen Team: ${newUser.team}`);
+      if (created) {
+        console.log(`Created new user (ID: ${newUser.id}): Discord Name: ${newUser.discordName}, Discord Global: ${newUser.discordGlobal}, 
+          EA Username: ${newUser.eaName}, League Role: ${newUser.role}, Chosen Team: ${newUser.team}`);
+        return true;
+      } else {
+        return false;
+      }
   } catch (error) {
     console.error(`Error creating new user: ${error}`);
   }
 }
 
-module.exports = { convertFullTeamToSimple, convertTeamToFullName, fetchMembers, fetchSeasonDataObject, fetchMemberTeams, syncDatabase, createNewMember };
+async function weekNumberFancy() {
+
+  const seasonDataJSON = fs.readFileSync(path.resolve(__dirname, '../data/seasonData.json'));
+  const seasonDataObj = JSON.parse(seasonDataJSON);
+
+  const weekNumber = seasonDataObj.weekNumber;
+
+  const weekFancy = WEEKNUMBERS[weekNumber];
+
+  return weekFancy;  
+}
+
+module.exports = { convertFullTeamToSimple, convertTeamToFullName, fetchMembers, fetchSeasonDataObject, fetchMemberTeams, syncDatabase, createNewMember, weekNumberFancy };
