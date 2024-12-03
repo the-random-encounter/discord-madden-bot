@@ -142,10 +142,9 @@ package.json
 package-lock.json
 
 # SQLite database files
-db/
+db
 db/madden.sqlite
 db/madden.sqbpro
 
 # ESLint settings
 .eslintrc.json
-config.json
