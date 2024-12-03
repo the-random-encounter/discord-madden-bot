@@ -142,8 +142,7 @@ package.json
 package-lock.json
 
 # SQLite database files
-db
-
+db/
 
 # ESLint settings
 .eslintrc.json
