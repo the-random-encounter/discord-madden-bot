@@ -57,6 +57,11 @@ class User extends Model {
 }
 
 User.init({
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
   eaName: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -70,11 +75,18 @@ User.init({
     type: DataTypes.STRING,
     allowNull: false,
   },
-  role: DataTypes.STRING,
-  numSeasons: DataTypes.INTEGER,
+  role: {
+    type: DataTypes.STRING,
+    defaultValue: 'Member',
+  },
+  numSeasons: {
+    type: DataTypes.INTEGER,
+    defaultValue: 1,
+  },
   active: { 
     type: DataTypes.BOOLEAN,
     allowNull: false,
+    defaultValue: true,
   },
   weekFinished: {
     type: DataTypes.BOOLEAN,
@@ -113,7 +125,7 @@ Season.init({
   superBowlWinner: DataTypes.STRING,
   afcChampion: DataTypes.STRING,
   nfcChampion: DataTypes.STRING,
-  Participants: DataTypes.STRING,
+  participants: DataTypes.STRING,
   afcBye: DataTypes.STRING,
   nfcBye: DataTypes.STRING,
   weekNumber: DataTypes.INTEGER,
